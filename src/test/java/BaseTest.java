@@ -1,4 +1,6 @@
-import Pages.LoginPage;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.HomePage;
+import pages.LoginPage;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
@@ -12,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public abstract class BaseTest {
     WebDriver driver;
     LoginPage loinPage;
+    HomePage homePage;
 
     @BeforeClass
     public static void  setupClass() {
@@ -26,6 +29,7 @@ public abstract class BaseTest {
 //        driver = new InternetExplorerDriver();
 //        driver = new FirefoxDriver();
         loinPage = new LoginPage(driver);
+        homePage = new HomePage(driver);
     }
 
     @After

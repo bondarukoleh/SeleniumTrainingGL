@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 public class LoginTest extends BaseTest{
     @Test
     public void testValidSignIn(){
-        loinPage.openLoginHomePage();
+        loinPage.openLoginPage();
         loinPage.enterUserName("admin");
         loinPage.enterUserPass("admin");
         loinPage.clickLoginButton();
